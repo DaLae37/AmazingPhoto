@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MultimediaManagementProgramClass</class>
+ <widget class="QMainWindow" name="MultimediaManagementProgramClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>멀티미디어 관리 프로그램</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="ContentsManagement">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>100</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔바른고딕</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>콘텐츠 관리</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PhotoViewer">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>175</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔바른고딕</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>사진 보기</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="VideoViewer">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>250</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔바른고딕</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>동영상 보기</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Title">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>360</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔바른고딕</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>멀티미디어 관리 프로그램</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CopyRight">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>340</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>나눔바른고딕</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>개발자 : dalae37
+폰트 : 바른나눔고딕
+개발 도구 : QT</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MultimediaManagementProgram.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ContentsManagement</sender>
+   <signal>clicked()</signal>
+   <receiver>MultimediaManagementProgramClass</receiver>
+   <slot>OpenContentsManagement()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>382</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>488</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PhotoViewer</sender>
+   <signal>clicked()</signal>
+   <receiver>MultimediaManagementProgramClass</receiver>
+   <slot>OpenPhotoViewer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>412</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>491</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>VideoViewer</sender>
+   <signal>clicked()</signal>
+   <receiver>MultimediaManagementProgramClass</receiver>
+   <slot>OpenVideoViewer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>393</x>
+     <y>520</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>497</x>
+     <y>533</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>OpenContentsManagement()</slot>
+  <slot>OpenPhotoViewer()</slot>
+  <slot>OpenVideoViewer()</slot>
+ </slots>
+</ui>

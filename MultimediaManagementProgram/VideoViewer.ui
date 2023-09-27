@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoViewer</class>
+ <widget class="QWidget" name="VideoViewer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>비디오 보기</string>
+  </property>
+  <widget class="QLabel" name="Notice1">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>15</y>
+     <width>70</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>120</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>조회 결과</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="FileNameRetrieve">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>70</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>파일 이름 검색</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PersonName">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>160</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>120</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>인물 이름</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PlaceName">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>215</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>120</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>장소 이름</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="PlaceNameInput">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>235</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="EventName">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>105</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>120</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>이벤트 이름</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="EventNameInput">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>130</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="FileNameInput">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>40</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="PersonNameInput">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>185</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="MultiRetrieve">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>265</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>다중 검색</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="RetrieveResult">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>40</y>
+     <width>150</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FileName">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>15</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>120</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔바른고딕</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>파일 이름</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>FileNameRetrieve</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoViewer</receiver>
+   <slot>RetrieveFileName()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>237</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>292</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MultiRetrieve</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoViewer</receiver>
+   <slot>MultiRetrieve()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>223</x>
+     <y>275</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>RetrieveFileName()</slot>
+  <slot>MultiRetrieve()</slot>
+ </slots>
+</ui>
