@@ -10,6 +10,11 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>나눔바른고딕</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>콘텐츠 관리</string>
   </property>

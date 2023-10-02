@@ -1,4 +1,5 @@
 #include "VideoLoadDialog.h"
+#include "ContentsManagement.h"
 
 VideoLoadDialog::VideoLoadDialog(QWidget* parent) : QDialog(parent)
 {
@@ -32,6 +33,7 @@ void VideoLoadDialog::SaveVideo() {
 
 		file.close(); //파일 스트림 닫기
 		writeFile.close();
+		((ContentsManagement*)parent())->Reload();
 		this->close();
 	}
 }

@@ -60,6 +60,10 @@ private:
 		}
 	}
 
+public slots:
+	//새로 고침 버튼이 눌렸을 때
+	void Reload();
+
 private slots:
 	//미등록 리스트에서 아이템이 선택 되었을 때
 	void SelectUnregisterFile();
@@ -72,9 +76,6 @@ private slots:
 
 	//비디오 불러오기 다이얼로그 버튼이 눌렸을 때
 	void OpenVideoLoadDialog();
-
-	//새로 고침 버튼이 눌렸을 때
-	void Reload();
 
 	//모든 리스트 비우기 버튼이 눌렸을 때
 	void MakeEmpty();

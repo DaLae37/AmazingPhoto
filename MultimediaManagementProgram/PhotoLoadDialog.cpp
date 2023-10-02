@@ -12,7 +12,7 @@ void PhotoLoadDialog::LoadPhoto()
 {
 	//사진 열기 다이얼로그를 열어
 	QFileDialog dialog;
-	QString filePath = dialog.getOpenFileName(this, "Load Photo", "", "Photo Files (*.png *.jpg *.bmp)");
+	QString filePath = dialog.getOpenFileName(this, "Load Photo", "", "Photo Files (*.png *.jpg *.bmp *.webp)");
 
 	//파일 이름을 가져옴
 	QString fileName = filePath.section("/", -1);
@@ -42,6 +42,7 @@ void PhotoLoadDialog::LoadPhoto()
 void PhotoLoadDialog::SavePhoto() {
 	if (loadedCurrentPhoto) { //임시 저장된 사진 객체를 실제 폴더에 저장
 		currentPhoto.save("./Contents/Multimedia/" + currentPhotoName);
+		((ContentsManagement*)parent())->Reload();
 		this->close(); //그 후 다이얼로그를 닫음
 	}
 }

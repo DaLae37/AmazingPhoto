@@ -89,6 +89,9 @@
     <ClCompile Include="DoublyLinkedListIterator.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
+    <ClCompile Include="VideoViewDialog.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="VideoViewer.ui">
@@ -107,6 +110,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="PhotoViewDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="VideoViewDialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -132,6 +138,9 @@
     <QtMoc Include="PhotoViewDialog.h">
       <Filter>Header Files\GUI</Filter>
     </QtMoc>
+    <QtMoc Include="VideoViewDialog.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Event.h">
@@ -155,5 +164,10 @@
     <ClInclude Include="DoublyLinkedListIterator.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Logo\amazing-logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

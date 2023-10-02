@@ -10,6 +10,11 @@
     <height>450</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>나눔바른고딕</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>사진 불러오기</string>
   </property>

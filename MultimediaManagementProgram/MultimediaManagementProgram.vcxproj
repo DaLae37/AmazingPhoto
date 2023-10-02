@@ -97,6 +97,7 @@
     <ClCompile Include="PhotoViewer.cpp" />
     <ClCompile Include="Place.cpp" />
     <ClCompile Include="VideoLoadDialog.cpp" />
+    <ClCompile Include="VideoViewDialog.cpp" />
     <ClCompile Include="VideoViewer.cpp" />
     <QtRcc Include="MultimediaManagementProgram.qrc" />
     <QtUic Include="ContentsManagement.ui" />
@@ -109,6 +110,7 @@
     <QtUic Include="PhotoViewDialog.ui" />
     <QtUic Include="PhotoViewer.ui" />
     <QtUic Include="VideoLoadDialog.ui" />
+    <QtUic Include="VideoViewDialog.ui" />
     <QtUic Include="VideoViewer.ui" />
   </ItemGroup>
   <ItemGroup>
@@ -133,8 +135,12 @@
     <ClInclude Include="Event.h" />
     <ClInclude Include="MultimediaContent.h" />
     <ClInclude Include="Person.h" />
+    <QtMoc Include="VideoViewDialog.h" />
     <QtMoc Include="PhotoViewDialog.h" />
     <ClInclude Include="Place.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Logo\amazing-logo.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

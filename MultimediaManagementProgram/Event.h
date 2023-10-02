@@ -28,7 +28,7 @@ public :
 	*	@brief	해당 장소에 있는 콘텐츠의 모든 id를 반환
 	*	@return eventIdList를 pass by reference로 넘겨줌
 	*/
-	DoublyLinkedList<std::string> GetIdList() {
+	DoublyLinkedList<std::string> &GetIdList() {
 		return eventIdList;
 	}
 

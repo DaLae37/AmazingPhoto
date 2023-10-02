@@ -186,7 +186,7 @@ void PhotoViewer::MultiRetrieve() {
 		if (!isFind) { //만약 발견되지 않았으면
 			return; //함수 종료
 		}
-		
+
 		DoublyLinkedListIterator<std::string> iter1(event.GetIdList()); //아이디를 받아와 Iterator를 생성
 
 		while (iter1.NotNull()) {

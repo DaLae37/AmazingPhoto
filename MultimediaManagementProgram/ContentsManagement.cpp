@@ -1,7 +1,7 @@
 #include "ContentsManagement.h"
 #include "MultimediaManagementProgram.h"
 
-ContentsManagement::ContentsManagement(QWidget *parent) : QWidget(parent) {
+ContentsManagement::ContentsManagement(QWidget* parent) : QWidget(parent) {
 	setWindowFlags(Qt::Window);
 	ui.setupUi(this);
 
@@ -23,7 +23,7 @@ void ContentsManagement::SelectUnregisterFile() { //미등록 리스트의 아이템을 클�
 void ContentsManagement::SelectRegisterFile() {
 	isUnregisterSelected = false;
 	int row = ui.MasterList->currentItem()->row(); //등록리스트에서 선택한 아이템의 인덱스를 탐색
-	selectedRegisterFileName = ui.MasterList->item(row,0)->text(); //그 인덱스를 통해 0번 컬럼인 파일이름을 저장
+	selectedRegisterFileName = ui.MasterList->item(row, 0)->text(); //그 인덱스를 통해 0번 컬럼인 파일이름을 저장
 	isRegisterSelected = true; //미등록 리스트의 선택은 해제
 }
 
@@ -56,7 +56,7 @@ void ContentsManagement::Reload() {
 				bool isFind = false;
 				MultimediaContent content;
 				content.SetRecord(fd.name, "", "", "", "", "", 0); //임시적으로 콘텐츠를 생성하고
-				((MultimediaManagementProgram*)parent())->getMasterList()->RetrieveItem(content,isFind); //MasterList에서 존재하는지 탐색
+				((MultimediaManagementProgram*)parent())->getMasterList()->RetrieveItem(content, isFind); //MasterList에서 존재하는지 탐색
 				if (!isFind) { //MasterList에 없을 경우
 					ui.UnregisterFile->addItem(fd.name); //미등록 리스트에 추가
 				}
@@ -70,9 +70,10 @@ void ContentsManagement::Reload() {
 
 void ContentsManagement::MakeEmpty() { //모든 리스트를 비움
 	int row = ui.MasterList->rowCount(); //등록 리스트의 길이를 가져와
-	for (int i = 0; i < row+1; i++) {
-		ui.MasterList->removeRow(i); //모든 행을 삭제함
+	for (int i = 0; i < row; i++) {
+		ui.MasterList->removeRow(0); //모든 행을 삭제함
 	}
+	
 	((MultimediaManagementProgram*)parent())->getMasterList()->MakeEmpty(); //모든 리스트를 비워줌
 	((MultimediaManagementProgram*)parent())->getEventList()->MakeEmpty();
 	((MultimediaManagementProgram*)parent())->getPersonList()->MakeEmpty();
@@ -88,7 +89,7 @@ void ContentsManagement::AddItem() { //아이템을 추가
 
 		std::string fileName = ui.FileNamePrint->text().toStdString(); //파일 이름
 		std::string fileType = ui.FileTypePrint->text().toStdString(); //확장자
-		std::string createDate = std::to_string(timer->tm_year + 1900) + "-" + std::to_string(timer->tm_mon + 1) + "-" + std::to_string(timer->tm_mday) + "-" + std::to_string(timer->tm_hour) + "-" + std::to_string(timer->tm_min) + "-" + std::to_string(timer->tm_sec) + "-";
+		std::string createDate = std::to_string(timer->tm_year + 1900) + "-" + std::to_string(timer->tm_mon + 1) + "-" + std::to_string(timer->tm_mday) + "-" + std::to_string(timer->tm_hour) + "-" + std::to_string(timer->tm_min) + "-" + std::to_string(timer->tm_sec);
 		std::string eventName = ui.EventNameInput->text().toStdString(); //입력한 이벤트 이름을 가져옴
 		std::string personName = ui.PersonNameInput->text().toStdString(); //입력한 인물 이름을 가져옴
 		std::string placeName = ui.PlaceNameInput->text().toStdString(); //입력한 장소 이름을 가져옴
@@ -101,25 +102,31 @@ void ContentsManagement::AddItem() { //아이템을 추가
 		Event event;
 		event.setEventName(eventName); //이벤트를 임시 생성
 		((MultimediaManagementProgram*)parent())->getEventList()->RetrieveItem(event, isFind); //해당 이벤트가 존재하면
-		event.AddId(fileName); //이벤트에 id를 추가
 		if (!isFind) {
 			((MultimediaManagementProgram*)parent())->getEventList()->AddItem(event); //이번트가 존재하지 않았을 경우 이벤트를 생성
+		}
+		else {
+			event.AddId(fileName); //이벤트에 id를 추가
 		}
 
 		Person person;
 		person.setPersonName(personName); //인물을 임시 생성
 		((MultimediaManagementProgram*)parent())->getPersonList()->RetrieveItem(person, isFind); //해당 인물이 존재하면
-		person.AddId(fileName); //인물에 id를 추가
 		if (!isFind) {
 			((MultimediaManagementProgram*)parent())->getPersonList()->AddItem(person); //인물이 존재하지 않았을 경우 인물을 생성
+		}
+		else {
+			person.AddId(fileName); //인물에 id를 추가
 		}
 
 		Place place;
 		place.setPlaceName(placeName); //장소를 임시 생성
 		((MultimediaManagementProgram*)parent())->getPlaceList()->RetrieveItem(place, isFind); //해당 장소가 존재하면
-		place.AddId(fileName); //장소에 id를 추가
 		if (!isFind) {
 			((MultimediaManagementProgram*)parent())->getPlaceList()->AddItem(place); //장소가 존재하지 않았을 경우 장소를 생성
+		}
+		else {
+			place.AddId(fileName); //장소에 id를 추가
 		}
 
 		int row = ui.MasterList->rowCount(); //등록 리스트의 인덱스를 받아와
@@ -143,7 +150,7 @@ void ContentsManagement::AddItem() { //아이템을 추가
 void ContentsManagement::DeleteItem() { //아이템 삭제
 	if (isRegisterSelected) { //등록 리스트에서 선택된 아이템이 있을 때
 		MultimediaContent content;
-		content.SetRecord(selectedRegisterFileName.toStdString(), "", "", "", "","", 0); //콘텐츠 임시 생성
+		content.SetRecord(selectedRegisterFileName.toStdString(), "", "", "", "", "", 0); //콘텐츠 임시 생성
 		((MultimediaManagementProgram*)parent())->getMasterList()->DeleteItem(content); //삭제
 		Reload(); //새로고침
 		int index = ui.MasterList->currentRow();
@@ -163,6 +170,7 @@ void ContentsManagement::SaveToFile() { //파일에 Master List의 정보를 저장
 }
 
 void ContentsManagement::LoadFromFile() { //파일로부터 정보를 읽어옴
+	MakeEmpty();
 	std::ifstream inFile;
 	inFile.open("./Contents/Database/data.txt"); //데이터 폴더에 data.txt
 	int row = ui.MasterList->rowCount();
@@ -173,7 +181,7 @@ void ContentsManagement::LoadFromFile() { //파일로부터 정보를 읽어옴
 		while (!inFile.eof()) {
 			MultimediaContent content;
 			content.ReadDataFromFile(inFile); //콘텐츠를 임시 생성해 정보를 읽어옴
-			if (inFile.eof()) {
+			if (inFile.eof() || content.getCreateDate() == "") {
 				break;
 			}
 			((MultimediaManagementProgram*)parent())->getMasterList()->AddItem(content); //Master List에 해당 콘텐츠 추가

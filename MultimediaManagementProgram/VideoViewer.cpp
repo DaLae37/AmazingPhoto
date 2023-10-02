@@ -211,3 +211,8 @@ void VideoViewer::MultiRetrieve() {
 		}
 	}
 }
+
+void VideoViewer::OpenVideoFile() {
+	videoViewDialog = new VideoViewDialog(ui.RetrieveResult->currentItem()->text(), this);
+	videoViewDialog->show();
+}

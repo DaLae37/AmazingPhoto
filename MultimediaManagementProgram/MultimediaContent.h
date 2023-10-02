@@ -3,6 +3,8 @@
 #include <fstream>
 #include <string>
 
+#define NUM_OF_DATA 7
+
 class MultimediaContent
 {
 private :

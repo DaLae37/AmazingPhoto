@@ -15,7 +15,7 @@ private :
 	NodeType<T>* currentPointer; //리스트에서 현재 가리키고 있는 위치
 
 public :
-	DoublyLinkedListIterator(DoublyLinkedList<T> list) : list(list), currentPointer(list.getHead()) {} //기본 생성자
+	DoublyLinkedListIterator(DoublyLinkedList<T>& list) : list(list), currentPointer(list.getHead()) {} //기본 생성자
 	~DoublyLinkedListIterator(); // 기본 소멸자
 
 	/**

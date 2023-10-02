@@ -10,8 +10,17 @@
     <height>400</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>나눔바른고딕</family>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>멀티미디어 관리 프로그램</string>
+   <string>Amazing Photo</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Logo/amazing-logo.png</normaloff>Logo/amazing-logo.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="ContentsManagement">
@@ -84,7 +93,10 @@
      </font>
     </property>
     <property name="text">
-     <string>멀티미디어 관리 프로그램</string>
+     <string>Amazing Photo</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="CopyRight">

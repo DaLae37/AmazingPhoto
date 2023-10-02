@@ -27,7 +27,7 @@ public:
 	*	@brief	해당 사람이 있는 콘텐츠의 모든 id를 반환
 	*	@return personIdList를 pass by reference로 넘겨줌
 	*/
-	DoublyLinkedList<std::string> GetIdList() {
+	DoublyLinkedList<std::string> &GetIdList() {
 		return personIdList;
 	}
 
