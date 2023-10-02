@@ -89,7 +89,7 @@
     <ClCompile Include="DoublyLinkedListIterator.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
-    <ClCompile Include="VideoViewDialog.cpp">
+    <ClCompile Include="VideoViewWindow.cpp">
       <Filter>Source Files\GUI</Filter>
     </ClCompile>
   </ItemGroup>
@@ -112,7 +112,7 @@
     <QtUic Include="PhotoViewDialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="VideoViewDialog.ui">
+    <QtUic Include="VideoViewWindow.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -138,7 +138,7 @@
     <QtMoc Include="PhotoViewDialog.h">
       <Filter>Header Files\GUI</Filter>
     </QtMoc>
-    <QtMoc Include="VideoViewDialog.h">
+    <QtMoc Include="VideoViewWindow.h">
       <Filter>Header Files\GUI</Filter>
     </QtMoc>
   </ItemGroup>

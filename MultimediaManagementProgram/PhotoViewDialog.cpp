@@ -1,6 +1,5 @@
 #include "PhotoViewDialog.h"
 
-
 PhotoViewDialog::PhotoViewDialog(QString fileName, QWidget* parent) : QDialog(parent)
 {
 	setWindowFlags(Qt::Window);

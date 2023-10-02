@@ -439,9 +439,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>RetrieveResult</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>VideoViewer</receiver>
+   <slot>OpenVideoFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>-2</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>RetrieveFileName()</slot>
   <slot>MultiRetrieve()</slot>
+  <slot>OpenVideoFile()</slot>
  </slots>
 </ui>

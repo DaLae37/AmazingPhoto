@@ -1,7 +1,7 @@
 #pragma once
 #include <QWidget>
 #include "ui_VideoViewer.h"
-#include "VideoViewDialog.h"
+#include "VideoViewWindow.h"
 
 class VideoViewer : public QWidget
 {
@@ -9,10 +9,11 @@ class VideoViewer : public QWidget
 		
 public :
 	VideoViewer(QWidget* parent = Q_NULLPTR);
+	~VideoViewer();
 
 private :
 	Ui::VideoViewer ui;
-	VideoViewDialog* videoViewDialog; //비디오 재생 다이얼로그
+	VideoViewWindow* videoViewWindow; //비디오 재생 윈도우
 
 private slots:
 	//파일 이름으로 검색하는 함수

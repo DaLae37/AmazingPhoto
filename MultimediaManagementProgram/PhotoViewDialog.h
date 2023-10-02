@@ -1,3 +1,4 @@
+#pragma once
 #include <QWidget>
 #include <QDialog>
 #include "ui_PhotoViewDialog.h"

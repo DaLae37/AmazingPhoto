@@ -14,7 +14,7 @@
     <ProjectGuid>{F266D309-FF5A-482D-8105-844752C8750D}</ProjectGuid>
     <Keyword>QtVS_v303</Keyword>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
     <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -48,12 +48,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>5.15.2_msvc2019_64</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core;gui;multimedia;widgets;multimediawidgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
-    <QtInstall>msvc2019_64</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;gui;multimedia;widgets;multimediawidgets</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
@@ -97,8 +97,8 @@
     <ClCompile Include="PhotoViewer.cpp" />
     <ClCompile Include="Place.cpp" />
     <ClCompile Include="VideoLoadDialog.cpp" />
-    <ClCompile Include="VideoViewDialog.cpp" />
     <ClCompile Include="VideoViewer.cpp" />
+    <ClCompile Include="VideoViewWindow.cpp" />
     <QtRcc Include="MultimediaManagementProgram.qrc" />
     <QtUic Include="ContentsManagement.ui" />
     <QtUic Include="MultimediaManagementProgram.ui" />
@@ -110,8 +110,8 @@
     <QtUic Include="PhotoViewDialog.ui" />
     <QtUic Include="PhotoViewer.ui" />
     <QtUic Include="VideoLoadDialog.ui" />
-    <QtUic Include="VideoViewDialog.ui" />
     <QtUic Include="VideoViewer.ui" />
+    <QtUic Include="VideoViewWindow.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="ContentsManagement.h" />
@@ -135,7 +135,7 @@
     <ClInclude Include="Event.h" />
     <ClInclude Include="MultimediaContent.h" />
     <ClInclude Include="Person.h" />
-    <QtMoc Include="VideoViewDialog.h" />
+    <QtMoc Include="VideoViewWindow.h" />
     <QtMoc Include="PhotoViewDialog.h" />
     <ClInclude Include="Place.h" />
   </ItemGroup>

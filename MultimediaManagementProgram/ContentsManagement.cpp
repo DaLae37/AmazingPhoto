@@ -188,34 +188,28 @@ void ContentsManagement::LoadFromFile() { //파일로부터 정보를 읽어옴
 
 			bool isFind = false;
 
-			Event event;
-			event.setEventName(content.getInnerEvent()); //이벤트를 임시 생성
-			((MultimediaManagementProgram*)parent())->getEventList()->RetrieveItem(event, isFind); //해당 이벤트가 존재하면
+			Event *event = new Event;
+			event->setEventName(content.getInnerEvent()); //이벤트를 임시 생성
+			((MultimediaManagementProgram*)parent())->getEventList()->RetrieveItem(*event, isFind); //해당 이벤트가 존재하면
+			event->AddId(content.getFileName()); //이벤트에 id를 추가
 			if (!isFind) {
-				((MultimediaManagementProgram*)parent())->getEventList()->AddItem(event); //이번트가 존재하지 않았을 경우 이벤트를 생성
-			}
-			else {
-				event.AddId(content.getFileName()); //이벤트에 id를 추가
+				((MultimediaManagementProgram*)parent())->getEventList()->AddItem(*event); //이번트가 존재하지 않았을 경우 이벤트를 생성
 			}
 
-			Person person;
-			person.setPersonName(content.getInnerPerson()); //인물을 임시 생성
-			((MultimediaManagementProgram*)parent())->getPersonList()->RetrieveItem(person, isFind); //해당 인물이 존재하면
+			Person *person = new Person;
+			person->setPersonName(content.getInnerPerson()); //인물을 임시 생성
+			((MultimediaManagementProgram*)parent())->getPersonList()->RetrieveItem(*person, isFind); //해당 인물이 존재하면
+			person->AddId(content.getFileName()); //인물에 id를 추가
 			if (!isFind) {
-				((MultimediaManagementProgram*)parent())->getPersonList()->AddItem(person); //인물이 존재하지 않았을 경우 인물을 생성
-			}
-			else {
-				person.AddId(content.getFileName()); //인물에 id를 추가
+				((MultimediaManagementProgram*)parent())->getPersonList()->AddItem(*person); //인물이 존재하지 않았을 경우 인물을 생성
 			}
 
-			Place place;
-			place.setPlaceName(content.getInnerPlace()); //장소를 임시 생성
-			((MultimediaManagementProgram*)parent())->getPlaceList()->RetrieveItem(place, isFind); //해당 장소가 존재하면
+			Place *place = new Place;
+			place->setPlaceName(content.getInnerPlace()); //장소를 임시 생성
+			((MultimediaManagementProgram*)parent())->getPlaceList()->RetrieveItem(*place, isFind); //해당 장소가 존재하면
+			place->AddId(content.getFileName()); //장소에 id를 추가
 			if (!isFind) {
-				((MultimediaManagementProgram*)parent())->getPlaceList()->AddItem(place); //장소가 존재하지 않았을 경우 장소를 생성
-			}
-			else {
-				place.AddId(content.getFileName()); //장소에 id를 추가
+				((MultimediaManagementProgram*)parent())->getPlaceList()->AddItem(*place); //장소가 존재하지 않았을 경우 장소를 생성
 			}
 
 			row = ui.MasterList->rowCount(); //등록 리스트의 인덱스를 가져와서
