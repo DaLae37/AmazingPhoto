@@ -1,13 +1,13 @@
 # AmazingPhoto
 Multimedia Managing Program
 
-[!메인](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto.webp)
+![메인](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto.webp)
 
-[!등록](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto_load.webp)
+![등록](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto_load.webp)
 
-[!관리](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto_manage.webp)
+![관리](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto_manage.webp)
 
-[!검색](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto_retrieve.webp)
+![검색](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto_retrieve.webp)
 
 # Supported Platform
 
