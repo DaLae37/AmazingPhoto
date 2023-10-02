@@ -7,8 +7,6 @@ Multimedia Managing Program
 
 ![관리](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto_manage.webp)
 
-![검색](https://www.dalae37.com/project/amazingphoto/resource/image/amazingphoto_retrieve.webp)
-
 # Supported Platform
 
 Windows
